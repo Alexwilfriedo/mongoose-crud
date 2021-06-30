@@ -1,0 +1,12 @@
+{
+  "name": "mongoose-crud",
+  "version": "1.0.0",
+  "description": "A simple package to facilitate crud operations of a mongoose model",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["mongoose-crud", "mongoose", "mongodb", "crud"],
+  "author": "Alex Wilfried OUATTARA",
+  "license": "ISC"
+}
