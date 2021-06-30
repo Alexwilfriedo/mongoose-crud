@@ -6,7 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexwilfriedo/mongoose-crud.git"
+  },
   "keywords": ["mongoose-crud", "mongoose", "mongodb", "crud"],
   "author": "Alex Wilfried OUATTARA",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alexwilfriedo/mongoose-crud/issues"
+  },
+  "homepage": "https://github.com/Alexwilfriedo/mongoose-crud#readme"
 }
