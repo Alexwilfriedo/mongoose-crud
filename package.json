@@ -2,19 +2,44 @@
   "name": "mongoose-crud",
   "version": "1.0.0",
   "description": "A simple package to facilitate crud operations of a mongoose model",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Alexwilfriedo/mongoose-crud.git"
   },
-  "keywords": ["mongoose-crud", "mongoose", "mongodb", "crud"],
+  "keywords": [
+    "mongoose-crud",
+    "mongoose",
+    "mongodb",
+    "crud"
+  ],
   "author": "Alex Wilfried OUATTARA",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Alexwilfriedo/mongoose-crud/issues"
   },
-  "homepage": "https://github.com/Alexwilfriedo/mongoose-crud#readme"
+  "homepage": "https://github.com/Alexwilfriedo/mongoose-crud#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "jest": "^27.0.6",
+    "mongoose": "^5.13.0",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.3",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.3.4"
+  },
+  "files": ["lib/**/*"]
 }
